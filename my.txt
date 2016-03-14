@@ -1,0 +1,80 @@
+#!/usr/bin/env python
+
+fname = raw_input('Please input your filename: ')
+lineNum = raw_input('How many lines you want to show: ')
+lineNum = int(lineNum)
+
+fobj = open(fname, 'r')
+
+for i in range(0, lineNum):
+    print fobj.readline()
+
+fobj.close()#!/usr/bin/env python
+'''练习9－3
+先读取文件，再读取所有行
+然后判断行数'''
+
+fname = raw_input('Please input filename: ')
+fobj = open(fname, 'r')
+
+totalLineNum = len(fobj.readlines())
+print totalLineNum#!/usr/bin/env python
+
+fname = raw_input('Please input your filename: ')
+lineNum = raw_input('How many lines you want to show: ')
+lineNum = int(lineNum)
+
+fobj = open(fname, 'r')
+
+for i in range(0, lineNum):
+    print fobj.readline()
+
+fobj.close()#!/usr/bin/env python
+'''练习9－4，当前只能实现按回车键继续'''
+
+
+fname = raw_input('Please input a filename: ')
+fobj = open(fname, 'r')
+flines = fobj.readlines()
+
+line = 1
+for i in flines:
+    print i
+    line += 1
+    if line % 3 == 0:
+        raw_input()
+#!/usr/bin/env python
+
+def isprime(n):
+    h = n / 2
+    t = False
+    while h > 1:
+        if n % h == 0:
+            break
+        h -= 1
+    else:
+        t = True
+
+    return t
+
+num = int(raw_input('Please input your number: '))
+n = isprime(num)
+print n
+
+#!/usr/bin/env python
+
+def getfactors(n):
+    list1 = []
+    for i in range(1, n+1):
+        if n % i == 0:
+            list1.append(i)
+        else:
+            continue
+
+    return list1
+
+
+num = int(raw_input('Please enter your number: '))
+n = getfactors(num)
+print n
+
