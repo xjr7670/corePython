@@ -1,0 +1,2 @@
+Fatal error: invalid input!
+This is my line
