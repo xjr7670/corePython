@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-#-*- coding:utf-8 -*-
+#!/usr/bin/env python -*- coding:utf-8 -*-
 
 db = {}
 
@@ -7,11 +6,11 @@ def newuser():
     prompt = 'login desired: '
     while True:
         name = raw_input(prompt)
-	if db.has_key(name):
-	    prompt = 'name taken, try another: '
-	    continue
-	else:
-	    break
+        if db.has_key(name):
+            prompt = 'name taken, try another: '
+            continue
+        else:
+            break
     pwd = raw_input('passwd: ')
     db[name] = pwd
 
@@ -31,11 +30,11 @@ def showmenu():
     (Q)uit
     Enter choice: """
 
-done = False
+    done = False
     while not done:
         chosen = False
-	while not chosen:
-	    try:
+        while not chosen:
+            try:
 	        choice = raw_input(prompt).strip()[0].lower()
 	    except (EOFError, KeyboardInterrupt):
 	        choice = 'q'
