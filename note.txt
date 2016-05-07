@@ -1,0 +1,11 @@
+1. 使用socket.socket()函数创建套接字，语法如下：
+socket(socket_family, socket_type, protocol)
+socket_family: AF_VNIX 或者 AF_INET
+socket_type: SOCK_STREAM 或者 SOCK_DGRAM
+protocol: 一般不填，默认为0
+
+创建一个TCP套接字：
+tcpSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+创建一个UDP套接字：
+udpSock = socket.socket(socket.AF_INET, socket.DGRAM)
