@@ -8,7 +8,7 @@ RDBMSs = {'s': 'sqlite', 'm': 'mysql', 'g': 'gadfly'}
 DB_EXC = None
 
 def setup():
-    return RDBMs[raw_input('''
+    return RDBMSs[raw_input('''
     Choose a database system:
     
     (M)ySQL
